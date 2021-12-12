@@ -6,9 +6,26 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+  <script>
+    // Fetch all the details element.
+    function intializeDetailsClick() {
+    const details = document.querySelectorAll("details");
+    // Add the onclick listeners.
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("click", () => {
+        // Close all the details that are not targetDetail.
+        details.forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.removeAttribute("open");
+          }
+        });
+      });
+    });
+  }
+</script>
 <style>body{background:#c2e59c;background:linear-gradient(270deg,#64b3f4,#c2e59c);}</style><link rel="stylesheet" href="styles.1a56d8a8940b972c1912.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.1a56d8a8940b972c1912.css"></noscript></head>
 <body>
   <app-root></app-root>
-<script src="runtime.36914e3a5e3401960b8e.js" defer></script><script src="polyfills.84e97ecd50c399d49cac.js" defer></script><script src="main.19899f680dc8f5ac16c1.js" defer></script>
+<script src="runtime.36914e3a5e3401960b8e.js" defer></script><script src="polyfills.84e97ecd50c399d49cac.js" defer></script><script src="main.178863a6aadfdc86b48c.js" defer></script>
 
 </body></html>
